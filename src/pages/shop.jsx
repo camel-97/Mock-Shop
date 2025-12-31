@@ -30,7 +30,29 @@ function Shop() {
     }, [error])
 
     return (
-        <p>This is the shop content</p>
+        <>
+        {products.map(product => (
+            <>
+            <div className="item-card" key={product.id}>
+                <h2 className="item-title">{product.title}</h2>
+                <div className="item-img">
+                    <img src={product.image}/>
+                </div>
+                <h3>£{product.price}</h3>
+            </div>
+            <div className="atc-cont">
+                <button className="atc-btn">Add to Cart</button>
+                <div className="cart-adjust-cont">
+                    <div>Quantity:</div>
+                    <button>-</button>
+                    <div>0</div>
+                    <button>+</button>
+                </div>
+            </div>
+            </>
+
+        ))}
+        </>
     )
 }
 
