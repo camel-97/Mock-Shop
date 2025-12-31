@@ -2,6 +2,9 @@ import { Outlet } from 'react-router'
 import Nav from '../components/nav';
 
 function Layout() {
+
+    const [cart, setCart] = useState({});
+
     return (
         <>
         <Nav/>
