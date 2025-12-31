@@ -5,7 +5,10 @@ function Shop() {
 
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
+    const [quantity, setQuantity] = useState({});
 
+
+    //On mount fetch of all products
     useEffect(() => {
         async function fetchProducts() {
             const data = await productFetcher();
@@ -29,6 +32,14 @@ function Shop() {
         console.log('fetch error:', error)
     }, [error])
 
+
+    //Quantity Change handling
+    function handleQuantity(id, delta) {
+        setQuantity(prev => ({
+            ...prev, [id]: Math.max(1, (prev[id] || 1) + delta) 
+        }))
+    };
+
     return (
         <>
             {products.map(product => (
@@ -43,9 +54,9 @@ function Shop() {
                     <div className="atc-cont">
                         <div className="cart-adjust-cont">
                             <div>Quantity:</div>
-                            <button>-</button>
-                            <div>0</div>
-                            <button>+</button>
+                            <button onClick={() => handleQuantity(product.id, -1)}>-</button>
+                            <div>{quantity[product.id] || 1}</div>
+                            <button onClick={() => handleQuantity(product.id, +1)}>+</button>
                         </div>
                         <button className="atc-btn">Add to Cart</button>
                     </div>
