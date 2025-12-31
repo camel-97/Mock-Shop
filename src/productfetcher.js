@@ -7,7 +7,6 @@ export default async function productFetcher() {
         }
 
         const productData = await response.json();
-
         return productData;
     }
     catch (error) {
