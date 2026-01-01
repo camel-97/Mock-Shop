@@ -1,8 +1,11 @@
 .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     background-color: #e7eaf6;
-    padding: 2%;
+    padding: 1%;
 }
 
 .links {
@@ -14,6 +17,3 @@
     margin: 0 2% 0 2%;
 }
 
-.atc-cont {
-    display: flex;
-}
