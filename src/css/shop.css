@@ -1,0 +1,51 @@
+.shop-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    gap: 3%;
+    
+}
+
+.shop-grid::after {
+    content: '';
+    display: block;
+    height: 100px;
+}
+
+.item-card {
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #e7eaf6;
+    box-shadow: 2px 2px 2px ;
+}
+
+.item-img {
+  width: 100%;         /* or fixed like 200px */
+  height: 200px;       /* your consistent height */
+  display: flex;
+  align-items: center;
+  background-color: #e7eaf6;
+  justify-content: center;
+  overflow: hidden;    /* optional: hides any overspill */
+  
+}
+
+.item-img img {
+    background-color: transparent;
+  max-width: 100%;
+  scale: 0.8;
+  max-height: 100%;
+  object-fit: contain;   /* ✅ SCALE to fit WITHOUT cropping */
+}
+
+
+.atc-cont, .cart-adjust-cont {
+    display: flex;
+}
+
+.atc-cont {
+    justify-content: space-between;
+}

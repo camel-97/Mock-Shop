@@ -13,3 +13,7 @@
 .logo, .links {
     margin: 0 2% 0 2%;
 }
+
+.atc-cont {
+    display: flex;
+}
