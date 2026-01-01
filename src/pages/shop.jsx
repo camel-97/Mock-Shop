@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import productFetcher from "../productfetcher";
+import { useOutletContext } from "react-router";
 
 function Shop() {
 
+    const {cart, setCart} = useOutletContext();
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [quantity, setQuantity] = useState({});
@@ -40,6 +42,24 @@ function Shop() {
         }))
     };
 
+    //Add to Cart handling
+    function addToCart(id, qty) {
+        const product = products.find(p => p.id === id);
+        setCart(prev => {
+            const existing = prev.find(item => item.id === id);
+            if (existing) {
+                return prev.map(item => item.id === id ? {...item, quantity: item.quantity + qty} : item)
+            } else {
+                return [...prev, {...product, quantity: qty}]
+            }
+        })
+    }
+
+    //console testing cart
+    useEffect(() => {
+        console.log('cart status following add:', cart)
+    }, [cart])
+
     return (
         <>
             {products.map(product => (
@@ -58,7 +78,7 @@ function Shop() {
                             <div>{quantity[product.id] || 1}</div>
                             <button onClick={() => handleQuantity(product.id, +1)}>+</button>
                         </div>
-                        <button className="atc-btn">Add to Cart</button>
+                        <button className="atc-btn" onClick={() => addToCart(product.id, quantity[product.id] || 1)}>Add to Cart</button>
                     </div>
                 </div>
             ))}
