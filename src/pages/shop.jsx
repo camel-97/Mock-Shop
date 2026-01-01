@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import productFetcher from "../productfetcher";
 import { useOutletContext } from "react-router";
+import '../css/shop.css'
 
 function Shop() {
 
@@ -61,11 +62,11 @@ function Shop() {
     }, [cart])
 
     return (
-        <>
+        <div className="shop-grid">
             {products.map(product => (
 
                 <div className="item-card" key={product.id}>
-                    <h2 className="item-title">{product.title}</h2>
+                    <h3 className="item-title">{product.title}</h3>
                     <div className="item-img">
                         <img src={product.image} />
                     </div>
@@ -82,7 +83,7 @@ function Shop() {
                     </div>
                 </div>
             ))}
-        </>
+        </div>
     )
 }
 
