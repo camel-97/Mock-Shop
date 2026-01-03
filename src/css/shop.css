@@ -1,5 +1,6 @@
 .shop-grid {
     max-width: 1200px;
+    background-color: #e7eaf6;
     margin: auto;
     padding: 5%;
     display: grid;
@@ -9,6 +10,7 @@
 }
 
 .shop-grid::after {
+    
     content: '';
     display: block;
     height: 100px;
@@ -18,7 +20,7 @@
     height: auto;
     padding: 15px;
     border-radius: 10px;
-    background-color: #e7eaf6;
+    background-color: white;
     box-shadow: 2px 2px 2px ;
 }
 
@@ -27,7 +29,7 @@
   height: 200px;       /* your consistent height */
   display: flex;
   align-items: center;
-  background-color: #e7eaf6;
+  background-color: white;
   justify-content: center;
   overflow: hidden;    /* optional: hides any overspill */
   
