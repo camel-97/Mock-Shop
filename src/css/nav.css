@@ -1,19 +1,20 @@
 .nav-bar {
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 999;
     display: flex;
     justify-content: space-between;
-    background-color: #e7eaf6;
-    padding: 1%;
+    background-color: white;
+    padding: 3vh;
 }
 
 .links {
     display: flex;
-    gap: 3vw
+    gap: 3vw;
 }
 
 .logo, .links {
-    margin: 0 2% 0 2%;
+    margin: 0 4% 0 2%;
 }
 
