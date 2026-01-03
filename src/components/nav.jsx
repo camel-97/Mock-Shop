@@ -11,7 +11,7 @@ function Nav({cart}) {
             <div className="links">
                 <Link to="/">Home</Link>
                 <Link to="/shop">Shop</Link>
-                <div>
+                <div className="cart-cont">
                     <Link to="/cart">Cart</Link>
                     {totalqty === 0 ? (null) : (
                     <div className="cart-icon">
