@@ -22,13 +22,13 @@
 }
 
 .item-img {
-  width: 100%;         /* or fixed like 200px */
-  height: 200px;       /* your consistent height */
+  width: 100%;         
+  height: 200px;       
   display: flex;
   align-items: center;
   background-color: white;
   justify-content: center;
-  overflow: hidden;    /* optional: hides any overspill */
+  overflow: hidden;    
   
 }
 
