@@ -5,15 +5,12 @@
     padding: 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, auto));
-    gap: 3%;
-    
-}
+    gap: 3%;}
 
-.shop-grid::after {
-    
+.shop-grid::after {  
     content: '';
     display: block;
-    height: 100px;
+    height: 50px;
 }
 
 .item-card {
