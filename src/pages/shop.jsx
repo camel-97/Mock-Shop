@@ -43,6 +43,11 @@ function Shop() {
         }))
     };
 
+    //Quantity reset
+    function resetQuantity(id) {
+        setQuantity(prev => ({...prev, [id]: 1}))
+    };
+
     //Add to Cart handling
     function addToCart(id, qty) {
         const product = products.find(p => p.id === id);
@@ -79,7 +84,10 @@ function Shop() {
                             <div>{quantity[product.id] || 1}</div>
                             <button onClick={() => handleQuantity(product.id, +1)}>+</button>
                         </div>
-                        <button className="atc-btn" onClick={() => addToCart(product.id, quantity[product.id] || 1)}>Add to Cart</button>
+                        <button className="atc-btn" onClick={() => {
+                            addToCart(product.id, quantity[product.id] || 1)
+                            resetQuantity(product.id);
+                            }}>Add to Cart</button>
                     </div>
                 </div>
             ))}
