@@ -5,7 +5,13 @@
     padding: 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, auto));
-    gap: 3%;}
+    gap: 3%;
+}
+
+.item-title {
+    font-weight: 600;
+    margin-top: 20px;
+}
 
 .shop-grid::after {  
     content: '';
@@ -43,6 +49,9 @@
 
 .atc-cont, .cart-adjust-cont {
     display: flex;
+    align-items: center;
+    gap: 7px
+
 }
 
 .atc-cont {
