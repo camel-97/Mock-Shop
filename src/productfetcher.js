@@ -13,5 +13,4 @@ export default async function productFetcher() {
         console.error('❌ Failed to fetch product:', error.message)
         return null;
     }
-    
 }
