@@ -9,6 +9,7 @@ function Shop() {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
     const [quantity, setQuantity] = useState({});
+    const [showTick, setShowTick] = useState({});
 
 
     //On mount fetch of all products
@@ -61,6 +62,12 @@ function Shop() {
         })
     }
 
+    //Show add confirmation
+    function confirmWithTick(id) {
+        setShowTick(prev => ({...prev, [id]: true}));
+        setTimeout(() => setShowTick(prev => ({...prev, [id]: false})), 2000)
+    };
+
     //console testing cart
     useEffect(() => {
         console.log('cart status following add:', cart)
@@ -87,7 +94,11 @@ function Shop() {
                         <button className="atc-btn" onClick={() => {
                             addToCart(product.id, quantity[product.id] || 1)
                             resetQuantity(product.id);
+                            confirmWithTick(product.id);
                             }}>Add to Cart</button>
+                    </div>
+                    <div className={`added ${showTick[product.id] && 'visible'}`}>
+                        ✔️ Added to cart!
                     </div>
                 </div>
             ))}
