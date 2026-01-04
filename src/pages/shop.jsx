@@ -78,11 +78,13 @@ function Shop() {
             {products.map(product => (
 
                 <div className="item-card" key={product.id}>
-                    <h3 className="item-title">{product.title}</h3>
+                    <div className="item-title">{product.title}</div>
+                    <hr />
                     <div className="item-img">
                         <img src={product.image} />
                     </div>
                     <h3>£{product.price}</h3>
+                    <hr />
 
                     <div className="atc-cont">
                         <div className="cart-adjust-cont">
