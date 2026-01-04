@@ -5,9 +5,18 @@ body {
 }
 
 main {
-    padding-top: 70px;
+    padding-top: 30px;
 }
 
 * {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: rgb(246, 246, 246);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 1px 1px 1px;
 }
