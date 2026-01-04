@@ -37,7 +37,7 @@
   max-width: 100%;
   scale: 0.8;
   max-height: 100%;
-  object-fit: contain;   /* ✅ SCALE to fit WITHOUT cropping */
+  object-fit: contain;   
 }
 
 
