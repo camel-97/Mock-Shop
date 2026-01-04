@@ -15,7 +15,7 @@
 
 .item-card {
     height: auto;
-    padding: 15px;
+    padding: 0 15px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 2px 2px 2px ;
@@ -48,3 +48,17 @@
 .atc-cont {
     justify-content: space-between;
 }
+
+.added {
+    padding: 8px 0;
+    text-align: center;
+    height: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    color: green
+
+}
+.visible {
+    opacity: 1;
+}
+
