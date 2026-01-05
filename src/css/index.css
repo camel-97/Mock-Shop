@@ -8,6 +8,13 @@ main {
     padding-top: 30px;
 }
 
+@media (max-width: 1200px) {
+    main {
+        padding-top: 70px
+    }
+    
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
