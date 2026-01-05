@@ -5,7 +5,7 @@
     padding: 5%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, auto));
-    gap: 3%;
+    gap: 5vh;
 }
 
 .item-title {
