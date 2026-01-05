@@ -59,19 +59,21 @@ function Cart() {
                     <tbody>
                         {cart.map(product => (
                             <tr key={product.id}>
-                                <td>
+                                <td className="title-cell">
                                     <div className="cart-img-div">
                                         <img src={product.image} alt={product.title} />
-                                        {product.title}
+                                        <span>{product.title}</span>
                                     </div>
                                 </td>
-                                <td>
-                                    <button className="dec-btn" onClick={() => { decQty(product.id) }}>-</button>
-                                    <span className="qty-cell">{product.quantity}</span>
-                                    <button className="inc-btn" onClick={() => { incQty(product.id) }}>+</button>
+                                <td className="max-w-cell adj-btn">
+                                    <div className="adj-btns">
+                                        <button className="dec-btn" onClick={() => { decQty(product.id) }}>-</button>
+                                        <span className="qty-cell">{product.quantity}</span>
+                                        <button className="inc-btn" onClick={() => { incQty(product.id) }}>+</button>
+                                    </div>
                                 </td>
-                                <td>£{product.price}</td>
-                                <td className="total-cell">{perproductcost(product.price, product.quantity)}</td>
+                                <td className="max-w-cell price-cell">£{product.price}</td>
+                                <td className="total-cell max-w-cell">{perproductcost(product.price, product.quantity)}</td>
                             </tr>
                         ))}
                     </tbody>
