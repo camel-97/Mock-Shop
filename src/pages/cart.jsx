@@ -39,6 +39,7 @@ function Cart() {
     }
 
     return (
+
         <div className="cart-card">
             <div className="items">
                 <div className="cart-header">
@@ -46,7 +47,9 @@ function Cart() {
                     <div>{totalqty} items</div>
                     <hr />
                 </div>
-
+                {totalqty <= 0 ? (
+                    <div className="empty-cart">Cart Empty</div>
+                ) : (
                 <table>
                     <thead>
                         <tr>
@@ -77,7 +80,8 @@ function Cart() {
                             </tr>
                         ))}
                     </tbody>
-                </table>
+                </table> 
+            )}
             </div>
             <div className="summary">
                 <div>Order Summary</div>
