@@ -15,6 +15,10 @@
     margin-bottom: 10px;
 }
 
+.cart-header {
+    margin: 20px;
+}
+
 .cart-card {
     margin: 100px 100px;
     background-color: white;
@@ -24,7 +28,7 @@
 }
 
 .items {
-    padding: 2%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     flex: 2
@@ -32,7 +36,7 @@
 
 .summary {
     background-color: rgb(246, 246, 246);
-    padding: 2%;
+    padding: 5%;
     flex: 1;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -43,7 +47,7 @@
 }
 
 .inc-btn {
-    margin-left: 4px;   
+    margin-left: 4px; 
 }
 
 tr > *:not(:first-child) {
@@ -71,10 +75,64 @@ tr > *:not(:first-child) {
     justify-content: space-between;
 }
 
+td {
+    padding: 0.8vw;
+    padding-bottom: 10px;
+}
+
 .checkout-btn {
     background-color: white;
 }
 
 .summary > :first-child {
     font-weight: 600;
+}
+
+.max-w-cell {
+    width: 80px   
+}
+
+@media (max-width: 1300px) {
+    .cart-card {
+        flex-direction: column;
+        gap: 50px;
+        margin: 80px 4vw;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 790px) {
+    .cart-card {
+        font-size: 0.9rem;
+    }
+    .title-cell {
+        max-width: 100px;
+    }
+    .items {
+        padding-left: 10%;
+    }
+    .price-cell {
+        padding-left: 2%
+    }
+    .cart-img-div {
+        flex-direction: column;
+    }
+    td.adj-btns{
+        display: flex;
+        align-items: center;
+    }
+    td {
+        padding-bottom: 20px;
+    }
+    .adj-btns {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+    .adj-btns > * {
+        margin: 3px
+    }
+    
 }
