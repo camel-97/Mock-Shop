@@ -5,6 +5,11 @@
     margin-right: 10px;
 }
 
+.empty-cart {
+   text-align: center;
+   font-weight: 600;
+}
+
 .cart-img-div {
     display: flex;
     align-items: center ;
@@ -82,6 +87,7 @@ td {
 
 .checkout-btn {
     background-color: white;
+    margin-top: 10px;
 }
 
 .summary > :first-child {
