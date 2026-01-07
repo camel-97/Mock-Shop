@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import image1 from '../assets/shalom-ejiofor-kVUAsl-elOY-unsplash.jpg'
 import image2 from '../assets/shalom-ejiofor-t_prchAm4ag-unsplash.jpg'
 import image3 from '../assets/shalom-ejiofor-YLSBNapbXXY-unsplash.jpg'
+import '../css/home.css'
 
 function Home() {
 
