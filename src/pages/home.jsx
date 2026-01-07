@@ -25,7 +25,7 @@ function Home() {
                 <img
                     key={index}
                     src={src}
-                    className={index === current ? 'active' : 'inactive'}
+                    className={`${index === current ? 'active' : 'inactive'} img-${index}`}
                 />
             ))}
         </div>
