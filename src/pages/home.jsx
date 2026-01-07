@@ -13,13 +13,14 @@ function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrent(prev => (prev + 1) % images.length);
-        }, 5000);
+        }, 10000);
 
         return () => clearInterval(interval)
     }, [])
 
 
     return (
+        <>
         <div className='carousel'>
             {images.map((src, index) => (
                 <img
@@ -29,6 +30,13 @@ function Home() {
                 />
             ))}
         </div>
+        <div className='home-info'>
+            <div className='home-header'>Style Starts Here</div>
+            <div className="home-sub">Curated pieces. Effortless style. Timeless confidence.</div>
+            <button className='main-shop-btn'>Shop Collection</button>
+        </div>
+
+        </>
     )
 }
 
