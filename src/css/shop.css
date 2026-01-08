@@ -1,6 +1,6 @@
 .shop-grid {
     max-width: 1200px;
-    background-color: #e7eaf6;
+    background-color: #38598b;
     margin: auto;
     padding: 100px 5% 5% 5%;
     display: grid;
@@ -14,8 +14,10 @@
     }
     .shop-grid {
         justify-content: center;
-    }
-    
+    }  
+}
+main {
+    background-color: #38598b;
 }
 
 .item-title {
@@ -81,3 +83,24 @@
     opacity: 1;
 }
 
+.loader {
+    position:absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid white;
+    
+    border-top: 6px solid #a2a8d3;
+    animation: load 1s ease-in-out none infinite;
+}
+
+@keyframes load {   
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
