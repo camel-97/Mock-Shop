@@ -39,7 +39,7 @@ function Cart() {
     }
 
     return (
-
+        <main>
         <div className="cart-card">
             <div className="items">
                 <div className="cart-header">
@@ -76,7 +76,7 @@ function Cart() {
                                     </div>
                                 </td>
                                 <td className="max-w-cell price-cell">£{product.price}</td>
-                                <td className="total-cell max-w-cell">{perproductcost(product.price, product.quantity)}</td>
+                                <td className="total-cell max-w-cell">£{perproductcost(product.price, product.quantity)}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -104,6 +104,7 @@ function Cart() {
                 <button className="checkout-btn">Proceed to Checkout</button>
             </div>
         </div>
+        </main>
     )
 }
 
