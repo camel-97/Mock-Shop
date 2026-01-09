@@ -1,9 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #0b258f;
+    background-color: #38598b;
 }
 
+main {
+    background-color: #38598b;
+}
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -16,9 +19,12 @@ button {
     border-radius: 5px;
     padding: 8px;
     box-shadow: 1px 1px 1px;
-    
 }
 
 button:hover {
+    transform: translateY(-3px);
+}
+
+a:hover {
     transform: translateY(-3px);
 }
