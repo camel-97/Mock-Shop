@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import '../css/nav.css'
 
-function Nav({cart}) {
+function Nav({ cart }) {
 
     const totalqty = cart.reduce((total, item) => total + item.quantity, 0);
 
@@ -14,9 +14,9 @@ function Nav({cart}) {
                 <div className="cart-cont">
                     <Link to="/cart">Cart</Link>
                     {totalqty === 0 ? (null) : (
-                    <div className="cart-icon">
-                        {totalqty}
-                    </div>)}                  
+                        <div className="cart-icon">
+                            {totalqty}
+                        </div>)}
                 </div>
             </div>
         </div>

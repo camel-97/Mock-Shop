@@ -13,11 +13,11 @@ import Shop from './pages/shop'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout/>,
+    element: <Layout />,
     children: [
-      {index: true, element: <Home/>},
-      {path: 'shop', element: <Shop/>},
-      {path: 'cart', element: <Cart/>}
+      { index: true, element: <Home /> },
+      { path: 'shop', element: <Shop /> },
+      { path: 'cart', element: <Cart /> }
     ]
   }
 ])
@@ -25,6 +25,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>,
 )

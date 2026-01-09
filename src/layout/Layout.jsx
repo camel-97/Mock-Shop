@@ -9,11 +9,11 @@ function Layout() {
 
     return (
         <>
-            <Nav cart={cart}/>
+            <Nav cart={cart} />
             <main>
-                <Outlet context={{cart, setCart}}/>
+                <Outlet context={{ cart, setCart }} />
             </main>
-            <Footer/>
+            <Footer />
         </>
     )
 }

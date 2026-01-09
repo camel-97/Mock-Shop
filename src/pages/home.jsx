@@ -35,7 +35,7 @@ function Home() {
                 <div className='home-header'>Style Starts Here.</div>
                 <div className="home-sub">Curated pieces. Effortless style. Timeless confidence.</div>
                 <div>
-                    <Link  to='/shop' className='main-shop-btn'>Shop Collection</Link>
+                    <Link to='/shop' className='main-shop-btn'>Shop Collection</Link>
                 </div>
             </div>
         </>

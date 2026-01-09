@@ -10,15 +10,21 @@
 }
 
 @keyframes slide {
-    from {transform: translateX(0)}
-    to {transform: translateX(-100%);}
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .logo-slide {
     display: inline-block;
     animation: slide 30s linear none infinite;
-    
+
 }
+
 .logo-slide img {
     height: 40px;
     margin: 0 60px;
