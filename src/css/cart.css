@@ -140,5 +140,9 @@ td {
     .adj-btns > * {
         margin: 3px
     }
+    .summary {
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0px;
+    }
     
 }
