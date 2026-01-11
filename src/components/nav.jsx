@@ -7,10 +7,10 @@ function Nav({ cart }) {
 
     return (
         <div className="nav-bar">
-            <div className="logo">Mock-Shop</div>
-            <div className="links">
+            <div data-testid="logo" className="logo">Mock-Shop</div>
+            <div data-testid="links" className="links">
                 <Link to="/">Home</Link>
-                <Link to="/shop">Shop</Link>
+                <Link data-testid="shop-link" to="/shop">Shop</Link>
                 <div className="cart-cont">
                     <Link to="/cart">Cart</Link>
                     {totalqty === 0 ? (null) : (
