@@ -1,34 +1,21 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from 'react-router'
-
-import './css/index.css'
-
-import Layout from './layout/Layout'
-
-import Home from './pages/home'
-import Cart from './pages/cart'
-import Shop from './pages/shop'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'shop', element: <Shop /> },
-      { path: 'cart', element: <Cart /> }
-    ]
-  }
-],
-  {
-    basename: 'Mock-Shop'
-  }
-)
-
+import {
+  HashRouter,
+  Routes,
+  Route
+} from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="cart" element={<Cart />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   </StrictMode>,
 )
