@@ -2,10 +2,12 @@ import { describe, it, expect } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { render, screen, within } from "@testing-library/react";
 import Nav from "../components/nav.jsx"
+import Home from "../pages/home.jsx"
 import { MemoryRouter, Routes, Route } from "react-router";
+import Layout from "../layout/Layout.jsx";
 
 //Nav bar testing 
-describe('Navbar Component', () => {
+describe('Home Page and Nav Component', () => {
     it ('renders logo, and links container', () => {
         render (
             <MemoryRouter>
@@ -17,6 +19,19 @@ describe('Navbar Component', () => {
         const container = screen.getByTestId('links')
         const links = within(container).getAllByRole('link');
         expect(links).toHaveLength(3);
+    })
+
+    it ('renders main content on page', () => {
+        render(
+            <MemoryRouter initialEntries={['/']}>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                    </Route>
+                </Routes>
+            </MemoryRouter>
+        )
+        expect(screen.getByText(/style starts here/i)).toBeInTheDocument();
     })
 
     it ('navigates to shop page on-click of shop Link', async () => {
