@@ -16,7 +16,9 @@
     overflow-y: hidden;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: 
+    opacity 1s ease-in-out,
+    object-position 1s ease-in-out;
     z-index: 0;
 }
 
@@ -25,22 +27,11 @@
     z-index: 1;
 }
 
-@media (max-width: 900px) {
-    .img-2 {
-        transform: translateX(-18%);
-        overflow-x: visible;
-    }
 
-    .img-0 {
-        transform: translateX(-15%);
-        overflow-x: visible;
-    }
-}
 
 @media (max-width: 500px) {
     .img-2 {
-        transform: translateX(-60%);
-        overflow-x: visible;
+        object-position: 70% center;
     }
 }
 
