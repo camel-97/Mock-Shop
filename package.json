@@ -1,6 +1,6 @@
 {
   "name": "mock-shop",
-  "homepage": "https://camel-97.github.io/Mock-Shop",
+  "homepage": "https://camel-97.github.io/Mock-Shop/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,8 @@
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router": "^7.10.1"
+    "react-router": "^7.10.1",
+    "react-router-dom": "^7.12.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
