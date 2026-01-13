@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: 'true',
+    base: '/Mock-Shop/',
     environment: 'jsdom',
     setupFiles: './src/tests/setup.js'
   },
