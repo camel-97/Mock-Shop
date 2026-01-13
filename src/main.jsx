@@ -20,7 +20,11 @@ const router = createBrowserRouter([
       { path: 'cart', element: <Cart /> }
     ]
   }
-])
+],
+  {
+    basename: 'Mock-Shop'
+  }
+)
 
 
 createRoot(document.getElementById('root')).render(
