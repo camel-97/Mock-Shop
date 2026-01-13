@@ -6,6 +6,12 @@ import {
   Route
 } from 'react-router-dom'
 
+import './css/index.css'
+import Layout from './layout/Layout.jsx'
+import Home from './pages/home.jsx'
+import Shop from './pages/shop.jsx'
+import Cart from './pages/cart.jsx'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
